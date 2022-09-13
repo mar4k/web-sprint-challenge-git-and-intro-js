@@ -232,11 +232,17 @@ Use getArtistByIndex to do the following:
 3. Return a string in the format `the artist at index {id} is {name}`
 ❗❗ NOTE: THE STRING YOU RETURN MUST MATCH THE FORMAT ABOVE OR IT WILL NOT PASS THE TEST! ❗❗
 
-🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
+🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist 
+at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(myArray, myIndex) {
+
+  const myId = myArray[myIndex].id
+  const myName = myArray[myIndex].name
+  return ('the artist at index ' + myId + ' is ' + myName)
 }
+
+console.log(getArtistByIndex(artists, 0))
 
 
 
@@ -248,10 +254,16 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+
+
+function listOfNames(myArray) {
+  // for(let i = 0; i < myArray.length; i++){
+    
+  // }
+  // return newArray;
 }
 
+console.log(listOfNames(artists))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -261,18 +273,22 @@ Use removeArtist to do the following:
 3. Create a new array that is a copy of the parameter array 
 4. Remove an artist from the copied array at the desired index
 5. Return the resulting copied array
-🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
+🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, 
+it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+function removeArtist(myArray, myIndex) {
+//   let myArray = myArray.push[myIndex];
+//   return myArray;
+// }
 
+console.log(removeArtist(artists, 2));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive the artist array as an argument passed from the FIRST parameter 
-2. Receive a string (name), a string (years), a string (genre), a string (nationality), and a string (bio) as arguments passed from the SECOND, THIRD, FOURTH, FIFTH, and SIXTH parameters, repsectively.
+2. Receive a string (name), a string (years), a string (genre), a string (nationality), 
+and a string (bio) as arguments passed from the SECOND, THIRD, FOURTH, FIFTH, and SIXTH parameters, repsectively.
 3. Create a copy of the array parameter.
 4. Create an object with the following format:
   { 
@@ -283,12 +299,25 @@ Use addArtist to do the following:
     bio: "Add 1-2 sentences (or use lorem ipsum)"
   }  
 5. Add the newly created object to the copied array, then return the copied array
-🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
+🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 
+'African American', 'I have a background in customer service at Big Retail Chain. I am attending 
+BloomTech to become a Frontend Developer.') should return the artists array with the above object 
+added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(startArray, myName, myYears, myGenre, myNationality, myBio) {
+  let newObject = 
+  {name: myName,
+  years: myYears,
+  genre: myGenre,
+  nationality: myNationality,
+  bio: myBio
+            }
+  let endArray = startArray.newObject
+  return endArray
 }
 
+console.log(addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 
+'I have a background in customer service.'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
