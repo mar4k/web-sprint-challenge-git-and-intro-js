@@ -237,10 +237,11 @@ at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(myArray, myIndex) {
 
-  const myId = myArray[myIndex].id
-  const myName = myArray[myIndex].name
-  return ('the artist at index ' + myId + ' is ' + myName)
+  const myId = myArray[myIndex].id;
+  const myName = myArray[myIndex].name;
+  return ('the artist at index ' + myId + ' is ' + myName);
 }
+// I'm thinking I could simplify this by just putting the parameters straight into the 'return' line
 
 console.log(getArtistByIndex(artists, 0))
 
@@ -257,13 +258,17 @@ Use listOfNames to do the following:
 
 
 function listOfNames(myArray) {
-  // for(let i = 0; i < myArray.length; i++){
-    
-  // }
-  // return newArray;
-}
 
-console.log(listOfNames(artists))
+  let newArray = [];
+  
+    for (const i in myArray);
+    newArray.push(myArray[i].name);
+    
+  return newArray;
+  }
+  
+  console.log(listOfNames(artists))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
