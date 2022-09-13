@@ -222,8 +222,8 @@ console.log(artists[2].bio)
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue 
 and console.log() to check your work. */
 
-artists[10].name = 'Vincent Van Dough'
-console.log(artists[10].name = 'Vincent Van Dough')
+artists[8].name = 'Vincent Van Dough'
+console.log(artists[8].name = 'Vincent Van Dough')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -284,7 +284,7 @@ it will return the resulting array with Amedeo Modigliani removed from our datas
 function removeArtist(myArray, myIndex) {
 //   let myArray = myArray.push[myIndex];
 //   return myArray;
-// }
+}
 
 console.log(removeArtist(artists, 2));
 
