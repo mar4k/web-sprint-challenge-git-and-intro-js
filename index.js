@@ -261,7 +261,8 @@ function listOfNames(myArray) {
 
   let newArray = [];
   
-    for (const i in myArray);
+    // for (const i in myArray);
+    for (let i = 0; i < myArray.length; i++)
     newArray.push(myArray[i].name);
     
   return newArray;
@@ -281,12 +282,12 @@ Use removeArtist to do the following:
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, 
 it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(myArray, myIndex) {
-//   let myArray = myArray.push[myIndex];
-//   return myArray;
+function removeArtist(array2, id2){
+  array2.splice(id2, 1)
+  return array2
 }
-
-console.log(removeArtist(artists, 2));
+// filter or map, how to access properties on an object
+console.log(removeArtist(artists, 4));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -310,16 +311,19 @@ BloomTech to become a Frontend Developer.') should return the artists array with
 added to the end of the array. */
 
 function addArtist(startArray, myName, myYears, myGenre, myNationality, myBio) {
-  let newObject = 
+  // const endArray = startArray.splice(0, 5);
+  const newObject = 
   {name: myName,
   years: myYears,
   genre: myGenre,
   nationality: myNationality,
   bio: myBio
             }
-  let endArray = startArray.newObject
-  return endArray
+  startArray.push(newObject)
+  return startArray
 }
+
+
 
 console.log(addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 
 'I have a background in customer service.'))
