@@ -339,18 +339,19 @@ Use lotsOfArt to do the following:
 
 function lotsOfArt(arr1) {
   
-  function filterByCount(paintings){
-    if (paintings.arr1 >= 100){
-      return true;
+  let newArray = [];
+  
+  // for (const i in arr3);
+  for (let i = 0; i < arr1.length; i++)
+    if(arr1[i].paintings >= 100){
+      newArray.push(arr1[i].name);
     }
-    return false;
+  
+  
+return newArray;
   }
 
-  const arrByPaint = arr1.filter(filterByCount);
-  return arrByPaint;
-}
-
-// console.log(lotsOfArt(artists))
+console.log(lotsOfArt(artists))
 
 
 
