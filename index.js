@@ -325,8 +325,8 @@ function addArtist(startArray, myName, myYears, myGenre, myNationality, myBio) {
 
 
 
-console.log(addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 
-'I have a background in customer service.'))
+// console.log(addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 
+// 'I have a background in customer service.'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -337,9 +337,21 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(arr1) {
+  
+  function filterByCount(paintings){
+    if (paintings.arr1 >= 100){
+      return true;
+    }
+    return false;
+  }
+
+  const arrByPaint = artists.filter(filterByCount);
+  return arrByPaint;
 }
+
+console.log(lotsOfArt(artists))
+
 
 
 
